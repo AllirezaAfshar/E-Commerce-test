@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>
+        {{ title }}
+    </title>
+</head>
+<body>
+
+    <div class="row">
+        <div class="medium-12 large-12 column">
+            <h4>Products</h4>
+            <div class="medium-2 column">
+                <a class="button" href=' {{  path("new_product") }} '> Add new product</a>
+            </div>
+            <table class="stack">
+
+                <tr>
+                    <th width="200"> title</th>
+                    <th width="200"> description</th>
+                    <th width="200"> color</th>
+                    <th width="200"> price</th>
+                    <th width="200"> action</th>
+                </tr>
+
+                {% for p in products %}
+                    <tr>
+                        <td> {{ p.title }} </td>
+                        <td> {{ p.description }} </td>
+                        <td> {{ p.color }} </td>
+                        <td> {{ p.price }} </td>
+                        <td>
+                            <a class="hollow button" href="{{ path("edit_product",{'id':p.id}) }}">Edit</a>
+                            --
+                            <a class="hollow button" href="{{ path("delete_product",{'id':p.id}) }}">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
+

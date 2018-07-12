@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="medium-12 large-12 column;">
+        <h4>{{ title }}</h4>
+        <form action="" method="post">
+
+            <div class="medium-4 columns">
+                <label>title</label>
+                    <input name="form[title]" value="{{ form.title is defined ? form.title : '' }}" type="text" />
+                </select>
+            </div>
+            <div class="medium-4 columns">
+                <label>description</label>
+                    <input name="form[description]" value="{{ form.description is defined ? form.description : '' }}" type="text" />
+                </select>
+            </div>
+            <div class="medium-4 columns">
+                <label>color</label>
+                    <input name="form[color]" value="{{ form.color is defined ? form.color : '' }}" type="text" />
+                </select>
+            </div>
+            <div class="medium-4 columns">
+                <label>price</label>
+                    <input name="form[price]" value="{{ form.price is defined ? form.price : '' }}" type="text" />
+                </select>
+            </div>
+            <div class="medium-12 columns">
+                <input type="submit" value="SAVE" class="button success hollow">
+            </div>
+        </form>
+    </div>
+</div>
